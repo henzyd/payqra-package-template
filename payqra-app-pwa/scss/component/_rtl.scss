@@ -1,0 +1,330 @@
+@use "../abstracts/index" as *;
+
+.rtl {
+    .image-select {
+        &.style-default {
+            >.dropdown-toggle {
+
+                padding-right: 0;
+
+                padding-left: 14px;
+
+
+                &::after {
+                    right: auto;
+                    left: 0;
+                }
+            }
+
+            .filter-option-inner-inner {
+                padding-left: 14px;
+                padding-right: 0;
+            }
+        }
+
+        &.image-2 {
+            max-width: max-content;
+
+            .filter-option-inner-inner {
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+
+            >.dropdown-menu {
+                padding: 5px;
+
+                a {
+                    .text {
+                        @include flex(center, center);
+
+                        img {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
+
+                .text {
+                    justify-content: center;
+                }
+            }
+        }
+
+        &.style-color-greyscale {
+            >.dropdown-toggle {
+
+                &::after {
+                    color: var(--greyscale);
+                }
+            }
+        }
+
+        &.style-border {
+            border: 1px solid var(--line-2);
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 999px;
+
+            .filter-option-inner-inner {
+                gap: 15px;
+                font-size: 14px;
+                line-height: 100%;
+            }
+        }
+
+        &.image-3 {
+            >.dropdown-toggle {
+                padding-left: 14px;
+                padding-right: 0px;
+
+                &::after {
+                    right: auto;
+                    left: 8px;
+                }
+            }
+        }
+
+        &.image-4 {
+
+            >.dropdown-toggle {
+                padding-right: 14px;
+            }
+        }
+
+        &.style-no-arrow {
+            >.dropdown-toggle {
+                padding-left: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            >.dropdown-menu {
+                margin-top: 8px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .filter-option-inner-inner {
+                padding: 0 10px;
+            }
+        }
+
+    }
+
+    .card-payment {
+        .bottom-card {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .sw-lr {
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: -24px;
+        padding-left: 24px;
+    }
+
+    .modal-sidebar {
+        .icon-close-popup {
+            left: 0 !important;
+            right: auto !important;
+        }
+    }
+
+    .nav-link-item {
+
+        &::after {
+            right: auto;
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        .icon {
+            font-size: 20px;
+        }
+
+        &.no-page {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .message-item {
+        .badge {
+            right: auto !important;
+            left: 0;
+        }
+    }
+
+    .header-2 {
+        .tf-btn-arrow {
+            left: auto !important;
+            right: 0;
+
+            i {
+                transform: rotate(180deg);
+            }
+        }
+
+        .btn-right {
+            left: 0;
+            right: auto !important;
+        }
+    }
+
+    .default-select {
+        .icon {
+            right: auto !important;
+            left: 14px;
+        }
+    }
+
+    .textarea-optional {
+        .icon {
+            right: auto !important;
+            left: 10px;
+        }
+    }
+
+    .box-card-balance {
+        .icon {
+            right: auto !important;
+            left: 12px;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    .header-mess {
+        .icon-arrow-narrow-left {
+            transform: rotate(180deg);
+        }
+    }
+
+    .bubble {
+        &.bubble-me {
+            .text-item {
+                border-radius: 12px 12px 12px 0px;
+                margin-left: 0;
+                margin-right: auto;
+                text-align: end;
+            }
+        }
+    }
+
+    .nice-select {
+        &::before {
+            right: auto;
+            left: 20px;
+        }
+    }
+
+    .group-input {
+
+        .inner-group-ip {
+            border-right: 1px solid var(--greyscale-200) !important;
+            border-left: 0px !important;
+            border-radius: 0px 12px 12px 0px !important;
+        }
+
+        input {
+            border-radius: 12px 0px 0px 12px !important;
+        }
+    }
+
+    .language-item {
+        .tf-check-rounded {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    .link-accounts-item {
+        .icon-direction-right {
+            transform: rotate(180deg);
+        }
+    }
+
+    .show-pass {
+        right: auto;
+        left: 16px;
+    }
+
+    .header {
+        .icon-arrow-narrow-left {
+            transform: rotate(180deg);
+        }
+    }
+
+    .icon-absolute {
+        i {
+            right: 16px;
+            left: auto;
+        }
+    }
+
+    .tf-field {
+        .tf-field-label {
+            left: auto;
+            right: 48px;
+        }
+    }
+
+    .btn-login-app {
+        .icon {
+            left: auto !important;
+            right: 20px;
+
+        }
+    }
+
+    .proof-item {
+
+        .img-hover {
+            left: auto;
+            right: 16px;
+        }
+
+        .tf-check-rounded {
+            left: 16px;
+            right: auto;
+        }
+    }
+
+    .box-input-field {
+        &::before {
+            left: auto !important;
+            right: 2px;
+        }
+    }
+
+    .wg-boarding {
+        .header-boarding {
+            .line-tes {
+                left: auto !important;
+                right: 24px !important;
+            }
+        }
+    }
+
+    .input-search {
+        i {
+            left: auto !important;
+            right: 16px;
+        }
+
+        .fillter-btn {
+            right: auto !important;
+            left: 16px;
+        }
+    }
+}

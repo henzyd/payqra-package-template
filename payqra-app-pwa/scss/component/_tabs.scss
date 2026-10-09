@@ -1,0 +1,127 @@
+@use "../abstracts/index" as *;
+
+.wg-tab {
+    .tab-product {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .nav-tab-item {
+        width: 100%;
+
+        &.active-bg-primary {
+            a {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    &.style-2 {
+        .tab-product {
+            overflow: auto;
+        }
+
+        .tab-slide {
+            border-radius: 4px;
+        }
+
+        .item-slide-effect {
+            border-radius: 4px;
+        }
+
+        .nav-tab-item {
+
+            a {
+                padding: 5px 20px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+
+.tab-content {
+    position: relative;;
+    .tab-pane {
+        display: none;
+        pointer-events: none;
+        // opacity: 0;
+        // visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        // -webkit-transform: translateY(10px);
+        // -ms-transform: translateY(10px);
+        // transform: translateY(10px);
+        // transition-timing-function: ease-in;
+        // transition-duration: 0.1s;
+
+        &.active {
+            display: block;
+            pointer-events: auto;
+            z-index: 2;
+            // opacity: 1;
+            // visibility: visible;
+            position: relative;
+            // -webkit-transform: none;
+            // -ms-transform: none;
+            // transform: none;
+            // transition-timing-function: ease-out;
+            // transition-duration: 0.2s;
+            // transition-delay: 0.2s;
+        }
+    }
+}
+
+.tab-slide {
+    position: relative;
+    background-color: var(--primary-50);
+    padding: 4px;
+    border-radius: 999px;
+
+    .nav-link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        border-radius: 999px;
+        color: var(--black);
+        position: relative;
+        z-index: 2;
+        &.active {
+            // background-color: var(--white);
+        }
+    }
+
+    &.bg-color-greyscale-50 {
+        background-color: var(--greyscale-50);
+
+        .nav-link {
+            color: var(--primary-400);
+            z-index: 2;
+
+
+            &.active {
+                color: var(--white);
+                // background-color: var(--primary);
+            }
+        }
+
+        .item-slide-effect {
+            background-color: var(--primary);
+        }
+    }
+}
+
+.item-slide-effect {
+    position: absolute;
+    height: 100%;
+    background-color: var(--white);
+    border-radius: 999px;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}

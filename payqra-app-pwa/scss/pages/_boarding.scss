@@ -1,0 +1,50 @@
+@use "../abstracts/index" as *;
+
+.wg-boarding {
+    @include d-flex();
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+
+    .header-boarding {
+        text-align: end;
+        padding: 20px 24px;
+        width: 100%;
+        position: relative;
+        .line-tes {
+            top: 47%;
+            left: 24px;
+            transform: translateY(-50%);
+            bottom: auto;
+            width: max-content !important;
+        }
+    }
+
+    .image-boarding {
+        max-width: 320px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        background-color: var(--white);
+        padding-top: 32px;
+        padding-bottom: 74px;
+        border-radius: 32px 32px 0 0;
+        box-shadow: 0px 4px 32px 0px #0000000F;
+        text-align: center;
+
+        .title {
+            margin-bottom: 12px;
+        }
+
+        .desc {
+            margin-bottom: 28px;
+            color: var(--greyscale-400);
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use "../abstracts/index" as *;
+
+.swiper-wrapper-r {
+    margin-right: -20px;
+}
+
+.market-swiper {
+    position: relative;
+
+    .menu-tab-v3 {
+        gap: 0;
+        border: 0;
+
+        .swiper-slide {
+            width: auto;
+
+            .icon-star {
+                color: var(--remake);
+            }
+        }
+    }
+}
+
+.dots-tes {
+    position: unset;
+
+    .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+        background-color: #b9b9bf;
+        opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $primary;
+        opacity: 1;
+        width: 28px;
+        border-radius: 30px;
+    }
+}
+
+
+.sw-lr {
+    margin-right: -24px;
+    padding-right: 24px;
+}
+
+.sw-boarding {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line-tes {
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        background-color: var(--primary-300);
+        border-radius: 50%;
+        @include transition3;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 24px;
+        background-color: var(--primary);
+        border-radius: 24px;
+    }
+}
+

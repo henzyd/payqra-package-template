@@ -1,0 +1,38 @@
+
+/* ---------------------------------------------------------
+    * Name: PayQra
+    * Version: 1.0.1
+    * Author: Themesflat
+    * Author URI: http://themesflat.com 
+
+	* Abstracts variable
+    
+    * Reset css styles
+
+    * Settings
+   
+    * Components
+        * button
+        * carousel
+        * chat
+        * footer
+        * form
+        * header
+        * modal
+        * off-canvas
+        * preloader
+        * range-slider
+        * rtl
+        * spinner
+        * switch
+        * tabs
+	
+    * widget
+
+/*--------- Abstracts variable ---------- */
+
+@use "./abstracts/index" as abstract;
+@use "reset";
+@use "./component/index" as component;
+@use "./pages/index" as pages;
+@use "widgets";

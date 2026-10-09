@@ -1,0 +1,30 @@
+.tf-switch-check {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    -webkit-appearance: none;
+    background: var(--greyscale-300);
+    border-radius: 999px;
+    transition: 0.2s;
+    margin-right: 0;
+
+    &::before {
+        content: "";
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--white);
+        border: 2px solid var(--grey-50);
+        transition: 0.2s;
+    }
+    &:checked {
+        background: var(--primary);
+        &::before {
+            left: 20px;
+            border-color: var(--primary);
+        }
+    }
+}

@@ -1,0 +1,328 @@
+@use "../abstracts/index" as *;
+
+
+
+.tf-btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    border-radius: 16px;
+    width: 100%;
+    padding: 16px;
+    @include flex(center, center);
+    text-align: center;
+    border: 1px solid transparent;
+
+    &.primary {
+        background-color: var(--primary);
+        color: var(--white);
+
+        &:hover {
+            background-color: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+
+        }
+    }
+
+    &.white {
+        background-color: var(--white);
+        color: var(--primary);
+
+        &:hover {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+
+        }
+    }
+
+    &.style-border {
+        background-color: transparent;
+        border-color: var(--greyscale-200);
+
+        &.border-primary-100 {
+            border-color: var(--primary-100) !important;
+            color: var(--primary);
+        }
+
+        &.border-primary {
+            border-color: var(--primary) !important;
+            color: var(--primary);
+        }
+
+        &.border-greyscale {
+            border-color: var(--greyscale) !important;
+            color: var(--greyscale);
+        }
+    }
+
+    &.primary-100 {
+        background-color: var(--primary-100);
+        color: var(--primary);
+
+        span {
+            color: var(--primary);
+        }
+    }
+
+    &.greyscale-50 {
+        background-color: var(--greyscale-50);
+        color: var(--greyscale);
+
+        span {
+            color: var(--greyscale);
+        }
+    }
+
+    &.greyscale-100 {
+        background-color: var(--greyscale-100);
+        color: var(--greyscale);
+
+        span {
+            color: var(--greyscale);
+        }
+    }
+
+    &.style-2 {
+        border-radius: 999px;
+        padding-top: 13.5px;
+        padding-bottom: 13.5px;
+    }
+
+    &.style-3 {
+        border-radius: 999px;
+    }
+
+    &.greyscale {
+        background-color: var(--greyscale);
+        color: var(--white);
+
+        span {
+            color: var(--white);
+        }
+    }
+
+    &.border-greyscale-300 {
+        border-color: var(--greyscale-300);
+        color: var(--greyscale-700);
+
+        span {
+            color: var(--greyscale-700);
+        }
+    }
+}
+
+.tf-btn-icon {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--bg-2);
+    backdrop-filter: blur(100px);
+    @include flex(center, center);
+
+    i {
+        font-size: 24px;
+        color: var(--white);
+    }
+
+    &.v2 {
+        background-color: var(--primary);
+        width: 80px;
+        height: 80px;
+
+        i {
+            font-size: 32px;
+        }
+    }
+
+    &.v3 {
+        width: auto;
+        height: auto;
+        @include d-flex();
+        align-items: center;
+        ;
+        gap: 8px;
+        background-color: transparent;
+
+        i {
+            font-size: 18px;
+            color: var(--greyscale-400)
+        }
+    }
+}
+
+.btn-my-report {
+    @include d-flex();
+    align-items: center;
+    gap: 19px;
+
+    .icon {
+        width: 28px;
+        height: 28px;
+        @include flex(center, center);
+        border-radius: 50%;
+        background-color: var(--white);
+
+        i {
+            color: var(--primary-400);
+            font-size: 12px;
+            padding-left: 2px;
+        }
+    }
+}
+
+.btn-start {
+    position: relative;
+    background-clip: padding-box;
+    background-color: var(--primary-50);
+    border-radius: 999px;
+    height: 48px;
+    @include flex(center, center);
+
+    .swipe-text {
+        color: var(--greyscale);
+    }
+}
+
+.btn-swipe {
+    transition: width 0.3s,
+        border-radius 0.3s,
+        height 0.3s;
+    position: absolute;
+    left: 0;
+    width: 64px;
+    height: 48px;
+    border-radius: 999px;
+    background-color: var(--primary);
+    @include flex(center, center);
+
+    i {
+        color: var(--white);
+    }
+}
+
+.tf-btn-arrow-2 {
+    @include d-flex();
+    align-items: center;
+    gap: 4px;
+    color: var(--headline-2);
+
+    i {
+        color: var(--headline-2);
+    }
+}
+
+
+.tf-btn-add-ticket {
+    @include flex(center, center);
+    width: 56px;
+    height: 56px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 4px 8px 32px 0px #C0002D33;
+
+    i {
+        color: var(--white);
+    }
+}
+
+.btn-ticket {
+    @include d-flex();
+    align-items: center;
+    padding: 8px 10px;
+    gap: 8px;
+    background-color: var(--white);
+    box-shadow: 4px 4px 40px 0px #0000000F;
+    border-radius: 12px;
+}
+
+.btn-login-app {
+    position: relative;
+
+    .icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+
+        i {
+            font-size: 27px;
+        }
+    }
+
+    &.style-dark {
+        background-color: var(--greyscale-800);
+        color: var(--white);
+
+        .icon {
+            i {
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.tf-btn-arrow-3 {
+    @include d-flex();
+    align-items: center;
+    gap: 4px;
+
+    .icon-direction-right {
+        width: 20px;
+        height: 20px;
+        @include flex(center, center);
+    }
+}
+
+.menu-btn {
+    position: fixed;
+    top: 50%;
+    left: -26px;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+        border-radius: 8px;
+        background-color: var(--primary);
+    }
+
+    i {
+        color: var(--white);
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        right: 3px;
+        transform: translateY(-50%);
+        font-size: 13px;
+    }
+}
+
+.fixed-bottom-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--white);
+    z-index: 9;
+    &.y-20 {
+        left: 20px;
+        right: 20px;
+    }
+
+    &.no-bg{
+        background-color: transparent;
+    }
+}

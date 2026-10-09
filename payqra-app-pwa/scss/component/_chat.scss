@@ -1,0 +1,134 @@
+@use "../abstracts/index"as *;
+
+.box-avt {
+    .image {
+        max-width: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    span {
+        color: var(--greyscale);
+    }
+}
+
+.mh-mess {
+    height: 100vh;
+
+    .time-now {
+        text-align: center;
+        color: var(--greyscale-700);
+        margin-bottom: 10px;
+    }
+}
+
+.box-mess {
+    padding-top: 88px;
+    padding-bottom: 72px;
+}
+
+.bubble {
+    margin-bottom: 10px;
+
+    .time {
+        margin-bottom: 4px;
+        color: var(--greyscale-500);
+    }
+
+    .text-item {
+        padding: 10px;
+        max-width: 198px;
+    }
+
+    .seen {
+        margin-top: 8px;
+        color: var(--greyscale-500);
+    }
+
+    &.bubble-you {
+        .text-item {
+            padding-left: 12px !important;
+            background-color: var(--greyscale-50);
+            border-radius: 12px 12px 12px 0;
+            color: var(--greyscale);
+        }
+    }
+
+    &.bubble-me {
+        .text-item {
+            padding-right: 12px !important;
+            background-color: var(--primary);
+            border-radius: 12px 12px 0 12px;
+            color: var(--white);
+            margin-left: auto;
+            text-align: start;
+        }
+
+        .content {
+            text-align: end;
+        }
+    }
+}
+
+.fixed-bototm{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.message-box-bottom {
+    @include d-flex();
+    align-items: center;
+    gap: 12px;
+    padding: 13px 25px;
+    background-color: var(--white);
+    .box-input {
+        position: relative;
+    }
+
+    .tf-btn-mood-smile {
+        width: 20px;
+        height: 20px;
+        left: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include flex(center, center);
+
+        i {
+            font-size: 15px;
+        }
+    }
+
+    input {
+        padding: 13px 70px 13px 40px;
+    }
+
+    .btn-icon-right {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        a {
+            width: 20px;
+            height: 20px;
+            @include flex(center,center);
+        }
+    }
+}
+
+.btn-message{
+    width: 46px;
+    height: 46px;
+    background-color: var(--primary);
+    @include flex(center,center);
+    border-radius: 6px;
+    i{
+        color: var(--white);
+    }
+}
